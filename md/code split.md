@@ -77,3 +77,43 @@ export default {
     })
 }
 ```
+# commonjs和esm举例
+commonjs
+```
+// b.js
+let count = 1;
+module.exports = {
+  count,
+  add() {
+    count++;
+  },
+  get() {
+    return count;
+  }
+};
+
+// a.js
+const { count, add, get } = require('./b');
+console.log(count); // 1
+add();
+console.log(count); // 1
+console.log(get()); // 2
+```
+esm
+```
+// b.js
+export let count = 1;
+export function add() {
+  count++;
+}
+export function get() {
+  return count;
+}
+
+// a.js
+import { count, add, get } from './b.mjs';
+console.log(count); // 1
+add();
+console.log(count); // 2
+console.log(get()); // 2
+```
