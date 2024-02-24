@@ -169,7 +169,7 @@ async function __federation_method_ensure(remoteId) {
   }
 }
 ```
-获取到远程模块入口文件后，通过`remote.lib.init`注册`globalThis.__federation_shared__`，例如:
-![image](https://github.com/baiqiana/vite-study/assets/56482105/583b3fba-78d3-4d4e-902b-139c985493ef)
-本地模块和远程模块都有`remotesMap`，通过方法`getSharedFromRuntime || getSharedFromLocal`获取依赖
+获取到远程模块入口文件后，通过`remote.lib.init`注册`globalThis.__federation_shared__`，例如:    
+![image](https://github.com/baiqiana/vite-study/assets/56482105/583b3fba-78d3-4d4e-902b-139c985493ef)     
+本地模块和远程模块都有`remotesMap`，通过方法`getSharedFromRuntime || getSharedFromLocal`获取依赖     
 执行远程模块代码时，判断`globalThis.__federation_shared__`是否存在获取该版本依赖的方法，如果存在，就从运行时获取依赖，该依赖来自本地依赖，如果不存在，则通过远程模块的`getSharedFromLocal`获取远程依赖
