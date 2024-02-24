@@ -156,7 +156,7 @@ async function createServer() {
 
   app.use(await createSsrMiddleware(app));
 
-  app.listen(4173, () => {
+  app.listen(3000, () => {
     console.log("node 服务器已启动 http://localhost:3000");
   });
 }
