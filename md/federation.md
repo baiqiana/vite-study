@@ -1,4 +1,4 @@
-![image](https://github.com/baiqiana/vite-study/assets/56482105/6efc501b-1ef1-44fe-a272-97b7594209f4)# 为什么需要module federation
+# 为什么需要module federation
 模块联邦，很好地解决了多应用模块复用的问题
 
 复用代码其它方案的缺点
